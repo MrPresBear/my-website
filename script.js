@@ -1,3 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Website Loaded Successfully");
-});
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+}

@@ -9,13 +9,23 @@
 <body>
 
 <nav>
-    <ul>
-        <li><a href="index.html"><img src="assets/logo.png" alt="Logo" class="logo"></a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+    
+    <!-- Hamburger Button -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
 </nav>
+
+<!-- Full-Screen Menu -->
+<div class="nav-menu" id="navMenu">
+    <span class="close-menu" onclick="toggleMenu()">✖</span>
+    <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+        <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+        <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
+    </ul>
+</div>
+
+
 
 
     <div class="hero">
