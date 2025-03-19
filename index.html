@@ -10,21 +10,15 @@
 
 <!-- Navigation Bar -->
 <nav>
-    <a href="index.html"><img src="assets/logo.png" alt="Logo" class="logo"></a>
-
-    <!-- Hamburger Button -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-wrapper">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
 </nav>
-
-<!-- Full-Screen Menu -->
-<div class="nav-menu" id="navMenu">
-    <span class="close-menu" onclick="toggleMenu()">✖</span>
-    <ul>
-        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-        <li><a href="about.html" onclick="toggleMenu()">About</a></li>
-        <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
-    </ul>
-</div>
 
 
 
@@ -32,8 +26,13 @@
 <div class="hero">
     <div>
 		<img src="assets/home-image.jpg" alt="IT Services" class="hero-image">
-        <h1>Welcome to Our IT Services</h1>
+        <h1>Welcome to PresparifyIT</h1>
         <p>We provide top-notch IT solutions for your business.</p>
+		<p class="extra-text">
+            Our team specializes in providing innovative technology solutions tailored to your business needs. 
+            From cybersecurity to cloud computing, we ensure that your IT infrastructure remains secure and efficient.
+            Let us help you build the future of your business.
+        </p>
     </div>
 </div>
 

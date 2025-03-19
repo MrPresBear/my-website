@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #0A192F;
     color: #E0E0E0;
+    text-align: center; /* Centers all body text */
 }
 
 /* Navigation Bar */
@@ -14,81 +15,130 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 2000; /* Keeps it above all content */
+    z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
+    justify-content: center;
+    height: 80px; /* Restores navbar height */
+    padding: 0 30px;
 }
 
-/* Logo */
+
+/* Navigation Menu (Rounded Rectangle) */
+.nav-container {
+    background: rgba(10, 25, 47, 0.8);
+    padding: 10px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Navigation Links */
+.nav-container a {
+    text-decoration: none;
+    color: #64FFDA;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-container a:hover {
+    background: #64FFDA;
+    color: #112240;
+}
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 .logo {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 70px;
+    max-height: 70px;
     width: auto;
     height: auto;
+    position: absolute;
+    left: 20px; /* Keeps it inside the navbar */
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
 }
 
-/* Hamburger Menu Button */
-.hamburger {
-    font-size: 30px;
-    color: #64FFDA;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 3000; /* Ensures it's always clickable */
-}
 
-/* Full-Screen Menu */
-.nav-menu {
-    position: fixed;
-    top: 0;
-    left: -100%; /* Initially hidden */
-    width: 100%;
+/* Hero Section */
+.hero {
     height: 100vh;
-    background: rgba(10, 25, 47, 0.98);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: left 0.4s ease-in-out;
-    z-index: 2500; /* Ensures it's above the content */
-}
-
-/* Show the menu when toggled */
-.nav-menu.show {
-    left: 0;
-}
-
-/* Menu Items */
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
     text-align: center;
+    padding-top: 100px; 
 }
 
-.nav-menu ul li {
-    margin: 20px 0;
+/* Hero Text */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-.nav-menu ul li a {
-    text-decoration: none;
-    color: #64FFDA;
-    font-size: 24px;
-    transition: 0.3s;
+.hero p {
+    font-size: 20px;
+    opacity: 0.8;
+    color: #CCCCCC;
 }
 
-.nav-menu ul li a:hover {
-    color: #FF4081;
+/* Images */
+.hero-image, .about-image {
+    max-width: 800px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 40px auto;
+    border-radius: 10px;
 }
 
-/* Close Button */
-.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: #FF4081;
-    cursor: pointer;
+/* Contact Page Form */
+.contact-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #112240;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #112240;
+}
+
+
+/* Images for Home & About */
+.hero-image, .about-image {
+    max-width: 800px;  /* Restricts max width */
+    max-height: 600px; /* Restricts max height */
+    width: 100%; /* Responsive scaling */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 20px auto 40px auto; /* Adds space below images */
+    border-radius: 10px;
+}
+/* Extra Paragraph Below Hero Section */
+.extra-text {
+    font-size: 18px;
+    color: #E0E0E0;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
 }
