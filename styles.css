@@ -10,23 +10,34 @@ body {
 /* Navigation Bar */
 nav {
     background: #112240;
-    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps logo left, menu right */
+    padding: 10px 30px;
 }
 
+/* Logo Styling */
+.logo {
+    max-width: 120px; /* Smaller size */
+    max-height: 120px;
+    width: auto;
+    height: auto;
+}
+
+/* Navbar Menu */
 nav ul {
     list-style: none;
-    text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 20px;
 }
 
@@ -45,15 +56,18 @@ nav ul li a:hover {
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px; /* Prevents content from hiding behind the navbar */
 }
 
+/* Hero Text */
 .hero h1 {
     font-size: 48px;
     margin-bottom: 10px;
-    color: white; /* Changed from light blue to white */
+    color: white; /* White text for better contrast */
 }
 
 .hero p {
@@ -62,6 +76,16 @@ nav ul li a:hover {
     color: #CCCCCC; /* Lighter gray for readability */
 }
 
+/* Images for Home & About */
+.hero-image, .about-image {
+    max-width: 800px;  /* Restricts max width */
+    max-height: 600px; /* Restricts max height */
+    width: 100%; /* Responsive scaling */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 20px auto 40px auto; /* Adds space below images */
+    border-radius: 10px;
+}
 
 /* Contact Page Form */
 .contact-form {
@@ -97,27 +121,18 @@ nav ul li a:hover {
     background: #FF4081;
 }
 
+/* Form Status Message */
+#form-status {
+    color: #64FFDA;
+    margin-top: 10px;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background: #112240;
-}
-/* Logo Restrictions */
-.logo {
-    max-width: 250px;
-    max-height: 250px;
-    width: auto;
-    height: auto;
-}
-
-/* Restricting Other Images */
-.hero-image, .about-image {
-    max-width: 800px;  /* Limits width */
-    max-height: 600px; /* Limits height */
-    width: 100%; /* Scales down for smaller screens */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
