@@ -126,8 +126,8 @@ footer {
 .hero-image, .about-image {
     max-width: 800px;  /* Restricts max width */
     max-height: 600px; /* Restricts max height */
-    width: 30%; /* Responsive scaling */
-    height: 25%; /* Maintains aspect ratio */
+    width: 100%; /* Responsive scaling */
+    height: auto; /* Maintains aspect ratio */
     display: block;
     margin: 20px auto 40px auto; /* Adds space below images */
     border-radius: 10px;
