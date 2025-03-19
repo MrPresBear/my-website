@@ -14,7 +14,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 2000; /* Keeps it above all content */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,43 +29,39 @@ nav {
     height: auto;
 }
 
-/* Hamburger Menu Icon */
+/* Hamburger Menu Button */
 .hamburger {
-    cursor: pointer;
     font-size: 30px;
     color: #64FFDA;
     background: none;
     border: none;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    z-index: 2000; /* Ensures it stays on top */
+    cursor: pointer;
+    position: relative;
+    z-index: 3000; /* Ensures it's always clickable */
 }
 
-nav {
-    z-index: 1000;
-}
-
+/* Full-Screen Menu */
 .nav-menu {
     position: fixed;
     top: 0;
-    left: -100%; /* Start off-screen */
+    left: -100%; /* Initially hidden */
     width: 100%;
     height: 100vh;
-    background: rgba(10, 25, 47, 0.98); /* Slightly darker for visibility */
+    background: rgba(10, 25, 47, 0.98);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: left 0.4s ease-in-out;
-    z-index: 1500; /* Ensures it's above everything */
+    z-index: 2500; /* Ensures it's above the content */
 }
 
-
+/* Show the menu when toggled */
 .nav-menu.show {
-    left: 0; /* Slide in */
+    left: 0;
 }
 
+/* Menu Items */
 .nav-menu ul {
     list-style: none;
     padding: 0;
@@ -95,79 +91,4 @@ nav {
     font-size: 30px;
     color: #FF4081;
     cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 80px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.hero p {
-    font-size: 20px;
-    opacity: 0.8;
-    color: #CCCCCC;
-}
-
-/* Images */
-.hero-image, .about-image {
-    max-width: 800px;
-    max-height: 600px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto 40px auto;
-    border-radius: 10px;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #112240;
-    border-radius: 10px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background: #0A192F;
-    color: white;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #64FFDA;
-    color: black;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    background: #FF4081;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #112240;
 }
