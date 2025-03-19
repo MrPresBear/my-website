@@ -103,9 +103,20 @@ footer {
     padding: 10px;
     background: #112240;
 }
+/* Logo Restrictions */
+.logo {
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+/* Restricting Other Images */
 .hero-image, .about-image {
-    width: 80%;
-    max-width: 600px;
+    max-width: 800px;  /* Limits width */
+    max-height: 600px; /* Limits height */
+    width: 100%; /* Scales down for smaller screens */
+    height: auto; /* Maintains aspect ratio */
     display: block;
     margin: 20px auto;
     border-radius: 10px;
